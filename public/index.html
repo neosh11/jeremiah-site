@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Jeremiah Pinto</title>
-
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-icon-60x60.png">
@@ -41,13 +40,19 @@
 
     <!-- Style CSS -->
     <link href="css/style.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBBE6W9PNR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FBBE6W9PNR');
+    </script>
 </head>
 
 <body>
@@ -78,7 +83,7 @@
                             I have a strong background in
                             software engineering and have worked on a variety of projects ranging from web development
                             to machine learning.
-<br>
+                            <br>
                             <br> My peers and mentees know me for clarity of thought and my ability to communicate
                             complex ideas in a simple manner. I have a strong work ethic and am always looking to
                             improve myself. I am a team player and have experience working in teams of various sizes. I
@@ -90,7 +95,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="personal-details">
-                                    <strong>SEPTEMBER 27</strong> 
+                                    <strong>SEPTEMBER 27</strong>
                                     <!--  1996 -->
                                     <small>BIRTHDAY</small>
                                 </div>
@@ -783,133 +788,133 @@
                             <!--.item-->
 
 
-                            <div class="item"></div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <img src="img/profiles/hola.jpg" alt="avatar" />
-                                </div>
+                            <div class="item">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <img src="img/profiles/hola.jpg" alt="avatar" />
+                                    </div>
 
-                                <div class="media-body">
-                                    <div class="user-name">Sophie</div>
-                                    <!--.user-name-->
+                                    <div class="media-body">
+                                        <div class="user-name">Sophie</div>
+                                        <!--.user-name-->
 
-                                    <div class="rating" data-star_rating="5.0">
-                                        <div class="rating-total">
-                                            <!-- Change rating percentage rate-0, rate-1, rate-2, rate-3, rate-4, rate-5  -->
-                                            <div class="rating-progress rate-5">
+                                        <div class="rating" data-star_rating="5.0">
+                                            <div class="rating-total">
+                                                <!-- Change rating percentage rate-0, rate-1, rate-2, rate-3, rate-4, rate-5  -->
+                                                <div class="rating-progress rate-5">
+                                                </div>
                                             </div>
                                         </div>
+                                        <!--.rating-->
                                     </div>
-                                    <!--.rating-->
                                 </div>
+                                <div class="review-text">
+                                    He's a great engineer, he had my back on every complex project we worked on. He's a
+                                    great team player and a great friend.
+                                </div>
+                                <!--.review-text-->
                             </div>
-                            <div class="review-text">
-                                He's a great engineer, he had my back on every complex project we worked on. He's a
-                                great team player and a great friend.
-                            </div>
-                            <!--.review-text-->
-                        </div>
-                        <!--.item-->
+                            <!--.item-->
 
+                        </div>
+                        <!--#review-->
                     </div>
-                    <!--#review-->
                 </div>
+                <!-- /.row -->
             </div>
-            <!-- /.row -->
-    </div>
-    <!-- /.container -->
-    </section>
-    <!-- .review-section -->
+            <!-- /.container -->
+        </section>
+        <!-- .review-section -->
 
-    <section class="section-contact section-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="section-title">
-                        <h2>Contact</h2>
-                    </div>
-                </div>
-
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <address>
-                                <strong>Location</strong>
-                                <br> Nedlands
-                                <br> PERTH
-
-                            </address>
-                        </div>
-                        <div class="col-md-3">
-                            <address>
-                                <strong>Mobile Number</strong>
-                                <br>
-                                <a href="tel:+61416446950">+61 416 446 950</a>
-                            </address>
-                        </div>
-                        <div class="col-md-3">
-                            <address>
-                                <strong>Email</strong>
-                                <br>
-                                <a href="mailto:#">jeremiahpinto@gmail.com</a>
-                            </address>
-                        </div>
-
-                    </div>
-                    <!--.row-->
-
-                    <div class="feedback-form">
-                        <h3>GET IN TOUCH</h3>
-
-                        <form id="contactForm" onsubmit="sendEmail()">
-                            <div class="form-group">
-                                <input type="text" name="name" required="" class="form-control" id="InputName"
-                                    placeholder="Full Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" required="" class="form-control" id="InputEmail"
-                                    placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="subject" class="form-control" id="InputSubject"
-                                    placeholder="Subject">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="4" required="" name="message" id="message-text"
-                                    placeholder="Write message"></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                    <!-- .feedback-form -->
-
-                </div>
-            </div>
-            <!--.row-->
-
-        </div>
-        <!--.container-fluid-->
-    </section>
-    <!--.section-contact-->
-
-    <footer class="footer">
-        <div class="copyright-section">
+        <section class="section-contact section-wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="copytext">&copy; Jeremiah Pinto, All rights reserved | Design By:
-                            <a href="https://themehippo.com">themehippo</a>
+                    <div class="col-md-3">
+                        <div class="section-title">
+                            <h2>Contact</h2>
                         </div>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <address>
+                                    <strong>Location</strong>
+                                    <br> Nedlands
+                                    <br> PERTH
+
+                                </address>
+                            </div>
+                            <div class="col-md-3">
+                                <address>
+                                    <strong>Mobile Number</strong>
+                                    <br>
+                                    <a href="tel:+61416446950">+61 416 446 950</a>
+                                </address>
+                            </div>
+                            <div class="col-md-3">
+                                <address>
+                                    <strong>Email</strong>
+                                    <br>
+                                    <a href="mailto:#">jeremiahpinto@gmail.com</a>
+                                </address>
+                            </div>
+
+                        </div>
+                        <!--.row-->
+
+                        <div class="feedback-form">
+                            <h3>GET IN TOUCH</h3>
+
+                            <form id="contactForm" onsubmit="sendEmail()">
+                                <div class="form-group">
+                                    <input type="text" name="name" required="" class="form-control" id="InputName"
+                                        placeholder="Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" required="" class="form-control" id="InputEmail"
+                                        placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="subject" class="form-control" id="InputSubject"
+                                        placeholder="Subject">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="4" required="" name="message" id="message-text"
+                                        placeholder="Write message"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                        <!-- .feedback-form -->
+
                     </div>
                 </div>
                 <!--.row-->
+
             </div>
-            <!-- .container-fluid -->
-        </div>
-        <!-- .copyright-section -->
-    </footer>
-    <!-- .footer -->
+            <!--.container-fluid-->
+        </section>
+        <!--.section-contact-->
+
+        <footer class="footer">
+            <div class="copyright-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="copytext">&copy; Jeremiah Pinto, All rights reserved | Design By:
+                                <a href="https://themehippo.com">themehippo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--.row-->
+                </div>
+                <!-- .container-fluid -->
+            </div>
+            <!-- .copyright-section -->
+        </footer>
+        <!-- .footer -->
 
     </div>
     <!-- #main-wrapper -->
