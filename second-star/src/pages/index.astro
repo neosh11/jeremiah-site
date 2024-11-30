@@ -24,8 +24,6 @@ import david from "../../public/img/profiles/david.jpg";
 import hola from "../../public/img/profiles/hola.jpg";
 import unknown from "../../public/img/unknown.png";
 import matteo from "../../public/img/img-testimonial-1.jpg";
-
-import FbxAnimation from "../components/FbxAnimation.jsx";
 ---
 
 <html lang="en">
@@ -127,16 +125,19 @@ import FbxAnimation from "../components/FbxAnimation.jsx";
 			src="https://www.googletagmanager.com/gtag/js?id=G-FBBE6W9PNR"
 		></script>
 		<script>
+			//@ts-ignore
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
+				//@ts-ignore
 				dataLayer.push(arguments);
 			}
+			//@ts-ignore
 			gtag("js", new Date());
+			//@ts-ignore
 			gtag("config", "G-FBBE6W9PNR");
 		</script>
 	</head>
 	<body>
-		<FbxAnimation client:load />
 		<div id="main-wrapper">
 			<header class="header">
 				<div class="container">
@@ -608,7 +609,7 @@ import FbxAnimation from "../components/FbxAnimation.jsx";
 								  </div>
 								</div>
 							  </div>
-							  
+
 					  
 							  <div class="progress-item">
 								<span class="progress-title">MAGIC</span>
