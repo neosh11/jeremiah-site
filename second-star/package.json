@@ -15,8 +15,10 @@
     "@types/bootstrap": "^5.2.10",
     "astro": "^4.16.16",
     "astro-bootstrap": "^0.7.0",
+    "astro-purgecss": "^4.9.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "purgecss": "^7.0.2",
     "solid-js": "^1.9.3",
     "three": "^0.171.0",
     "typescript": "^5.7.2"
