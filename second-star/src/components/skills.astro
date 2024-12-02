@@ -1,0 +1,71 @@
+---
+const skills = [
+  {
+    category: "S . P . E . C . I . A . L .",
+    items: [
+      { name: "STRENGTH", value: 30 },
+      { name: "PERCEPTION", value: 90 },
+      { name: "ENDURANCE", value: 90 },
+      { name: "CHARISMA", value: 70 },
+      { name: "INTELLIGENCE", value: 90 },
+      { name: "AGILITY", value: 70 },
+      { name: "LUCK", value: 50 },
+    ],
+  },
+  {
+    category: "LEVELS",
+    items: [
+      { name: "FRONTEND DEVELOPMENT", value: 95 },
+      { name: "BACKEND DEVELOPMENT", value: 65 },
+      { name: "MOBILE DEVELOPMENT", value: 90 },
+      { name: "UI/UX DESIGN", value: 90 },
+      { name: "PROJECT MANAGEMENT", value: 75 },
+      { name: "SOFTWARE ARCHITECTURE", value: 85 },
+      { name: "SOFTWARE TESTING", value: 85 },
+    ],
+  },
+];
+---
+
+<section class="section-wrapper skills-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="row">
+          {skills.map(({ category, items }) => (
+            <div class="col-md-6">
+              <div class="progress-wrapper">
+                <h3>{category}</h3>
+                {items.map(({ name, value }) => (
+                  <div class="progress-item">
+                    <span class="progress-title">{name}</span>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-valuenow={value}
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      <div
+                        class="progress-bar"
+                        style={`width: ${value}%`}
+                      >
+                        <span class="progress-percent">{value}%</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

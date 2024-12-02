@@ -1,0 +1,119 @@
+---
+import iman from "../../public/img/profiles/iman.jpeg";
+import david from "../../public/img/profiles/david.jpg";
+import hola from "../../public/img/profiles/hola.jpg";
+import unknown from "../../public/img/unknown.png";
+import matteo from "../../public/img/img-testimonial-1.jpg";
+import { Image } from "astro:assets";
+
+const references = [
+    {
+        name: "Iman Kareem",
+        avatar: iman,
+        rating: 5,
+        review: "He has taught me so much about software sales. His deep understanding of the product and the customer's needs is unparalleled. He managed to teach me complex Cisco products in a way that was easy to understand. He is a great mentor and I am grateful for the time I spent working with him.",
+    },
+    {
+        name: "Matteo Müller",
+        avatar: matteo,
+        rating: 5,
+        review: "Most creative dungeons and dragons player in the group. He can create worlds so vivid, that one feels as if they are living in them.",
+    },
+    {
+        name: "David",
+        avatar: david,
+        rating: 5,
+        review: "A great guy, he organised great events and team building activities.",
+    },
+    {
+        name: "Jason Lehmann",
+        avatar: unknown,
+        rating: 5,
+        review: "Truly the best president we've had at CFC. He's organized and networked. For the first time, we are thriving as a club.",
+    },
+    {
+        name: "Sophie",
+        avatar: hola,
+        rating: 5,
+        review: "He's a great engineer, he had my back on every complex project we worked on. He's a great team player and a great friend.",
+    },
+];
+---
+
+<section id="references" class="review-section section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="section-title">
+                    <h2>Recent Reference Check</h2>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div
+                    id="reviewCarousel"
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                >
+                    <div class="carousel-inner">
+                        {
+                            references.map(
+                                ({ name, avatar, rating, review }, index) => (
+                                    <div
+                                        class={`carousel-item card${index === 0 ? " active" : ""}`}
+                                    >
+                                        <div class="item card-body">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <Image
+                                                        height={100}
+                                                        src={avatar}
+                                                        class="img-fluid"
+                                                        alt={`Avatar of ${name}`}
+                                                    />
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="user-name">
+                                                        {name}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="review-text handwriting">
+                                                {review}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ),
+                            )
+                        }
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#reviewCarousel"
+                        data-bs-slide="prev"
+                    >
+                        <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#reviewCarousel"
+                        data-bs-slide="next"
+                    >
+                        <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/carousel-init.js"></script>
+</section>

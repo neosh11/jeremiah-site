@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+
+import aaf from "../../public/img/pins/aaf.png";
+import blm from "../../public/img/pins/blm.jpg";
+import greens from "../../public/img/pins/greens.png";
+import peace from "../../public/img/pins/peace.jpg";
+import progressive from "../../public/img/pins/progressive.jpg";
+
+const pins = [
+    { src: aaf, alt: "pin" },
+    { src: blm, alt: "pin" },
+    { src: greens, alt: "pin" },
+    { src: peace, alt: "pin" },
+    { src: progressive, alt: "pin" },
+];
+---
+
+<section class="section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="section-title">
+                    <h2></h2>
+                </div>
+            </div>
+
+            <div class="container row align-items-center col-md-9">
+                {
+                    pins.map(({ src, alt }) => (
+                        <div class="col-md-2">
+                            <div class="pin text-center">
+                                <Image
+                                    height={25}
+                                    src={src}
+                                    alt={alt}
+
+                                    style="height: 25px;"
+                                />
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>

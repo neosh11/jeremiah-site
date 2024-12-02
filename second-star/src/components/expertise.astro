@@ -1,0 +1,51 @@
+---
+const specialities = [
+    {
+        title: "Frontend Development",
+        description:
+            "From React to Angular to Vue, I have experience in building web applications using modern frontend frameworks.",
+    },
+    {
+        title: "Mobile Development",
+        description:
+            "I have experience in building mobile applications using React Native and Flutter.",
+    },
+    {
+        title: "Backend Development",
+        description:
+            "I have experience in building backend services using Node.js, Express, and Django.",
+    },
+    {
+        title: "Mentorship",
+        description:
+            "Via Coders for Causes, I have mentored over 100 students in software engineering. I also trained several engineers on my own teams.",
+    },
+];
+---
+
+<section class="expertise-wrapper section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="section-title">
+                    <h2>My Specialities</h2>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="row">
+                    {
+                        specialities.map(({ title, description }) => (
+                            <div class="col-md-6">
+                                <div class="expertise-item">
+                                    <h3>{title}</h3>
+                                    <p>{description}</p>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

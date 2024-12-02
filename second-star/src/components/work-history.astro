@@ -1,0 +1,34 @@
+---
+const workHistoryStats = [
+    { value: "5+", name: "years of experience" },
+    { value: "2M USD", name: "Value created" },
+    { value: "30+", name: "Engineers trained" },
+    { value: "8", name: "Hour Response Time" },
+];
+---
+
+<section class="work-history-wrapper section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="section-title">
+                    <h2>Work History</h2>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    {
+                        workHistoryStats.map(({ value, name }) => (
+                            <div class="col-sm-3">
+                                <div class="item-stats">
+                                    <div class="item-stats-value">{value}</div>
+                                    <div class="item-stats-name">{name}</div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

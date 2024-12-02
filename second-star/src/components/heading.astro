@@ -1,0 +1,117 @@
+---
+import { Image } from "astro:assets";
+import jerry from "../assets/jerry.png";
+import "bootstrap-icons/font/bootstrap-icons.css";
+---
+
+<header class="header">
+    <div class="container row textarea">
+        <div class="col-md-9">
+            <div class="name-wrapper">
+                <h1 class="name">
+                    Jeremiah Pinto
+                    <i
+                        id="playAudio"
+                        role="button"
+                        class="bi bi-play-circle text-light make-obvious"></i>
+                </h1>
+                <script>
+                    import { attachCanvasMouseEvents } from "../scripts/canvas.js";
+                    const audio = new Audio("/music/desperate.mp3");
+                    document
+                        .getElementById("playAudio")
+                        .addEventListener("click", () => {
+                            audio.loop = true;
+                            audio.play();
+                            // remove the button and the event listener
+                            document.getElementById("playAudio").remove();
+                            attachCanvasMouseEvents();
+                        });
+                </script>
+
+                <span>Master of Professional Engineering (Software)</span>
+            </div>
+            <p>
+                A dedicated and hardworking individual with <strong
+                    >5+ years</strong
+                > of Software Engineering experience and a love for people. I have
+                a deep grasp of Software Engineering principles coupled with a builder
+                mindset having worked on <strong>"zero to one"</strong> projects.
+                <br />
+                <br />
+                My peers and mentees know me for clarity of thought, the ability
+                to predict long term effects of technical decisions and the ability
+                communicate complex ideas in a simple manner. I pride myself in having
+                a strong work ethic and a growth mindset and am always looking to
+                improve myself.
+            </p>
+
+            <div class="row">
+                <!-- <div class="col-md-3">
+                    <div class="personal-details">
+                        <strong>SEPTEMBER 27 1996</strong>
+                        <small>BIRTHDAY</small>
+                    </div>
+                </div> -->
+                <div class="col-md-3">
+                    <div class="personal-details">
+                        <strong>PERTH, WA, AUSTRALIA</strong>
+                        <small>RESIDENCE</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="personal-details">
+                        <strong
+                            >ENGLISH
+                            <span>(NATIVE),</span> FRENCH
+                            <span>(INTERMEDIATE),</span> HINDI
+                            <span>(INTERMEDIATE)</span>
+                        </strong>
+                        <small>LANGUAGE</small>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="social-icon">
+                <li>
+                    <a href="https://www.facebook.com/jeremiah.pinto.507" target="_blank">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/jeremiah-pinto/" target="_blank">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/JeremiahPinto" target="_blank">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="toc">
+            <div class="container">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#about">General</a></li>
+                    <li><a href="#work-experience">Work Experience</a></li>
+                    <li><a href="#references">References</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <script src="../scripts/jeremiah.js"></script>
+    <div id="profileImg" class="profile-img">
+        <Image
+            height={2000}
+            role="button"
+            src={jerry}
+            class="img-fluid child shadowfilter"
+            alt="Jeremiah Pinto"
+            loading="eager"
+        />
+    </div>
+</header>

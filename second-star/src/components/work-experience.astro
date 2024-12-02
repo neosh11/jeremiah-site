@@ -1,0 +1,113 @@
+---
+const workExperiences = [
+    {
+        duration: "2020 - 2023",
+        title: "Web Developer",
+        company: "Spacetoco",
+        location: "Perth, Australia",
+        description: [
+            "Led the complete rewrite of the platform using Vue.js, improving performance by 40%.",
+            "Collaborated with cross-functional teams to develop new features, increasing user engagement by 25%.",
+            "Actively contributed to a positive team culture, earning recognition for excellent social and team-building skills.",
+        ],
+    },
+    {
+        duration: "2018 - 2020",
+        title: "Web Developer",
+        company: "Envited",
+        location: "Perth, Australia",
+        description: [
+            "Specialized in creating responsive and dynamic web applications using modern frameworks.",
+            "Optimized database interactions, reducing query execution time by 30%.",
+            "Contributed to client-facing features that enhanced user satisfaction.",
+        ],
+    },
+];
+
+const projects = [
+    {
+        title: "Real-time Booking System",
+        description:
+            "Designed and implemented a real-time booking system for Spacetoco, supporting thousands of users simultaneously.",
+    },
+    {
+        title: "Dashboard Analytics Tool",
+        description:
+            "Developed an interactive analytics dashboard using Vue.js and D3.js to visualize user engagement data.",
+    },
+    {
+        title: "Personal Portfolio Website",
+        description:
+            "Built a responsive portfolio site to showcase professional work and projects.",
+    },
+];
+---
+
+<section id="work-experience" class="section-education section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="section-title">
+                    <h2>Work Experience</h2>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        {
+                            workExperiences.map(
+                                ({
+                                    duration,
+                                    title,
+                                    company,
+                                    location,
+                                    description,
+                                }) => (
+                                    <div class="content-item">
+                                        <small>{duration}</small>
+                                        <h3>{title}</h3>
+                                        <h4>{company}</h4>
+                                        <p>{location}</p>
+                                        <ul class="description">
+                                            {description.map((point) => (
+                                                <li>{point}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ),
+                            )
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section-projects section-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="section-title">
+                    <h2>Projects</h2>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="row">
+                    {
+                        projects.map(({ title, description }) => (
+                            <div class="col-md-12">
+                                <div class="content-item">
+                                    <h3>{title}</h3>
+                                    <p>{description}</p>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

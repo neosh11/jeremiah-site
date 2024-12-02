@@ -1,0 +1,56 @@
+---
+const perks = [
+  {
+    title: "Lady Killer",
+    description:
+      "+10% damage to the opposite sex and unique dialogue options with certain characters.",
+  },
+  {
+    title: "Educated",
+    description:
+      "You gain two more skill points every time you advance in level.",
+  },
+  {
+    title: "Animal Friend",
+    description:
+      "On 1st rank, hostile animals become friendly. On 2nd rank they come to your aid against enemies except against other animals.",
+  },
+  {
+    title: "Friend of the Night",
+    description: "Your eyes adapt quickly to low-light conditions.",
+  },
+  {
+    title: "Night Person",
+    description: "+2 Intelligence and +2 Perception between 6:00 P.M. and 6:00 A.M.",
+  },
+  {
+    title: "Nerd Rage!",
+    description: "+15 DT and Strength increased to 10 whenever health is 20% or lower.",
+  },
+];
+---
+
+<section class="section-perks section-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="section-title">
+          <h2>Perks</h2>
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-12">
+            {perks.map(({ title, description }) => (
+              <div class="content-item">
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
