@@ -143,8 +143,6 @@ import Cursor from "../components/cursor.astro";
 			async
 			src="https://www.googletagmanager.com/gtag/js?id=G-FBBE6W9PNR"
 		></script>
-
-		
 	</head>
 	<body>
 		<canvas id="myCanvas" class="awesome-canvas"></canvas>
@@ -165,76 +163,88 @@ import Cursor from "../components/cursor.astro";
 		<div id="main-wrapper">
 			<Heading />
 
-			<Activity />
+			<div class="magic-wrapper">
+				<Activity />
+				<WorkHistory />
+				<Expertise />
+			</div>
 
-			<WorkHistory />
+			<div class="magic-wrapper">
+				<Skills />
+			</div>
 
-			<Expertise />
+			<div class="magic-wrapper">
+				<Perks />
+			</div>
 
-			<Skills />
+			<div class="magic-wrapper">
+				<WorkExperience />
+			</div>
 
-			<Perks />
-
-			<WorkExperience />
-
-			<section class="section-education section-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="section-title">
-								<h2>Education</h2>
-							</div>
-						</div>
-
-						<div class="col-md-9">
-							<div class="row">
-								<div class="col-md-12">
-									<div class="content-item">
-										<small>2016 - 2021</small>
-										<h3>
-											Master of Professional Engineering
-											(Software Engineering)
-										</h3>
-										<h4>
-											The University of Western Australia
-										</h4>
-
-										<p>Perth, Australia</p>
-									</div>
-
-									<!-- .experience-item -->
-									<div class="content-item">
-										<small>2010 - 2014</small>
-										<h3>High School Graduation</h3>
-										<h4>ICS</h4>
-
-										<p>Kuwait</p>
-									</div>
-									<!-- .experience-item -->
+			<div class="magic-wrapper">
+				<section class="section-education section-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="section-title">
+									<h2>Education</h2>
 								</div>
 							</div>
-							<!--.row-->
-						</div>
-					</div>
-					<!--.row-->
-				</div>
-				<!-- .container -->
-			</section>
-			<!-- .section-education -->
 
-			<References />
+							<div class="col-md-9">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="content-item">
+											<small>2016 - 2021</small>
+											<h3>
+												Master of Professional
+												Engineering (Software
+												Engineering)
+											</h3>
+											<h4>
+												The University of Western
+												Australia
+											</h4>
 
-			<section id="contact" class="section-contact section-wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="section-title">
-								<h2>Contact</h2>
+											<p>Perth, Australia</p>
+										</div>
+
+										<!-- .experience-item -->
+										<div class="content-item">
+											<small>2010 - 2014</small>
+											<h3>High School Graduation</h3>
+											<h4>ICS</h4>
+
+											<p>Kuwait</p>
+										</div>
+										<!-- .experience-item -->
+									</div>
+								</div>
+								<!--.row-->
 							</div>
 						</div>
+						<!--.row-->
+					</div>
+					<!-- .container -->
+				</section>
+				<!-- .section-education -->
+			</div>
+			<div class="magic-wrapper">
+				<References />
+			</div>
 
-						<div class="col-md-9">
-							<!-- <div class="row">
+			<div class="magic-wrapper">
+				<section id="contact" class="section-contact section-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="section-title">
+									<h2>Contact</h2>
+								</div>
+							</div>
+
+							<div class="col-md-9">
+								<!-- <div class="row">
 								<div class="col-md-3">
 									<address>
 										<strong>Location</strong>
@@ -261,21 +271,22 @@ import Cursor from "../components/cursor.astro";
 									</address>
 								</div>
 							</div> -->
-							<!--.row-->
+								<!--.row-->
 
 								<button type="submit" class="btn btn-primary">
 									<a href="mailto:jeremiahpinto@gmail.com">
 										<i class="fa fa-paper-plane"></i> Send Message
 									</a>
 								</button>
+							</div>
+							<!--.row-->
 						</div>
-						<!--.row-->
+						<!--.container-fluid-->
 					</div>
-					<!--.container-fluid-->
-				</div>
-				<!--.section-contact-->
-				<Footer />
-			</section>
+					<!--.section-contact-->
+					<Footer />
+				</section>
+			</div>
 
 			<Cursor />
 		</div>

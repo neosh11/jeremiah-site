@@ -223,8 +223,39 @@ button:focus,
  *  main Wrapper
  * -------------------*/
 #main-wrapper {
-    overflow: hidden;
+    overflow: clip;
     background-color: $background;
+}
+
+/* Each section fills the viewport and snaps into place */
+.magic-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.magic-wrapper>.section-wrapper {
+    animation: faded linear;
+    animation-timeline: view(20px)
+}
+
+@keyframes faded {
+    0% {
+        opacity: 0;
+        background-color: $background;
+        scale: 0.9;
+    }
+
+    20% {
+        opacity: 1;
+        background-color: $background;
+        scale: 1.02;
+    }
+
+    30% {
+        opacity: 1;
+        background-color: $background;
+        scale: 1.0;
+    }
 }
 
 /*-------------------
@@ -283,10 +314,25 @@ button:focus,
     padding: 50px 50px;
     margin: 0;
     border-top: 5px solid $primary;
-    border-bottom: 5px solid $primary;
     overflow: hidden;
+    animation: bottomBorder linear;
+    animation-timeline: view();
 }
 
+@keyframes bottomBorder {
+    0% {
+        border-bottom: 5px solid $primary;
+    }
+
+    95% {
+        border-bottom: 5px solid $background;
+    }
+
+    100% {
+        border-bottom: 1px solid $background;
+
+    }
+}
 
 .header .name-wrapper {
     margin-bottom: 30px;
@@ -368,6 +414,7 @@ button:focus,
     -webkit-filter: drop-shadow(12px 12px 7px #FFFF0080);
     filter: drop-shadow(12px 12px 7px #FFFF0080);
     animation: flicker 1.5s 1;
+    z-index: 10;
 }
 
 
@@ -568,7 +615,7 @@ button:focus,
  *-----------------*/
 
 #references .owl-wrapper .owl-item {
-color: #000;
+    color: #000;
     padding-right: 20px;
 }
 
@@ -588,7 +635,7 @@ color: #000;
 }
 
 #references .user-name {
-color: #000;
+    color: #000;
     font-weight: 500;
 }
 
