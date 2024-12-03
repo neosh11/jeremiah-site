@@ -234,6 +234,7 @@ button:focus,
 }
 
 .magic-wrapper>.section-wrapper {
+    background-color: $backgroundContent;
     animation: faded linear;
     animation-timeline: view(20px)
 }
@@ -241,19 +242,16 @@ button:focus,
 @keyframes faded {
     0% {
         opacity: 0;
-        background-color: $background;
         scale: 0.9;
     }
 
     20% {
         opacity: 1;
-        background-color: $background;
         scale: 1.02;
     }
 
     30% {
         opacity: 1;
-        background-color: $background;
         scale: 1.0;
     }
 }
